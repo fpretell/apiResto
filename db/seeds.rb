@@ -7,7 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-10.times do
+5.times do
   restaurant = Restaurant.create({name: Faker::Name.name})
+  restaurant.reviews.create({content: Faker::Lorem.sentence})
   restaurant.reviews.create({content: Faker::Lorem.sentence})
 end
